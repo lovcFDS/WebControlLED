@@ -1,0 +1,10 @@
+C:\Users\flame\Nextcloud2\编程相关\repos\WebControlLED\WebControlLED\bin\Debug\WebControlLED.exe.config
+C:\Users\flame\Nextcloud2\编程相关\repos\WebControlLED\WebControlLED\bin\Debug\WebControlLED.exe
+C:\Users\flame\Nextcloud2\编程相关\repos\WebControlLED\WebControlLED\bin\Debug\WebControlLED.pdb
+C:\Users\flame\Nextcloud2\编程相关\repos\WebControlLED\WebControlLED\obj\Debug\WebControlLED.csprojAssemblyReference.cache
+C:\Users\flame\Nextcloud2\编程相关\repos\WebControlLED\WebControlLED\obj\Debug\WebControlLED.Form1.resources
+C:\Users\flame\Nextcloud2\编程相关\repos\WebControlLED\WebControlLED\obj\Debug\WebControlLED.Properties.Resources.resources
+C:\Users\flame\Nextcloud2\编程相关\repos\WebControlLED\WebControlLED\obj\Debug\WebControlLED.csproj.GenerateResource.cache
+C:\Users\flame\Nextcloud2\编程相关\repos\WebControlLED\WebControlLED\obj\Debug\WebControlLED.csproj.CoreCompileInputs.cache
+C:\Users\flame\Nextcloud2\编程相关\repos\WebControlLED\WebControlLED\obj\Debug\WebControlLED.exe
+C:\Users\flame\Nextcloud2\编程相关\repos\WebControlLED\WebControlLED\obj\Debug\WebControlLED.pdb
