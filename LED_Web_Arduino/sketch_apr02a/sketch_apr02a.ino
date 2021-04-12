@@ -79,12 +79,12 @@ void read_eeprom()
   wifiname = "";
   wifipsw = "";
   // EEPROM.begin(20); //申请操作到地址4095（比如你只需要读写地址为100上的一个字节，该处也需输入参数101）
-  int a = int(EEPROM.read(0)) - int('0'); //wifi名的长度
-  int b = (int(EEPROM.read(1)) - int('0')) * 10 + (int(EEPROM.read(2)) - int('0')) ; //读数据;
+  int a = (int(EEPROM.read(0)) - int('0')) * 10 + (int(EEPROM.read(1)) - int('0')) + 1 ; //wifi名的长度
+  int b = (int(EEPROM.read(2)) - int('0')) * 10 + (int(EEPROM.read(3)) - int('0')); //读数据;
 
   Serial.println(a);
   Serial.println(b);
-  for (int addr = 3; addr < b + 1; addr++)
+  for (int addr = 4; addr < b + 1; addr++)
   {
     int data = EEPROM.read(addr); //读数据
     if (addr < a + 3)
@@ -125,14 +125,18 @@ void smartConfig()
 
 
       wifiname_len = String(WiFi.SSID().c_str()).length(); //获取wifi名的长度
-      //  EEPROM.write(0, char(wifiname_len)); //写在地址0的数据为存入的wifi名的长度
+      String wifiname_len_str;
+      if(wifiname_len < 10)
+      {
+        wifiname_len_str = "0" + String(wifiname_len);
+      }
+      else{
+        wifiname_len_str = String(wifiname_len);
+      }
 
-
-      // EEPROM.write(1, char(size_data)); //写在地址1的数据为存入的数据长度
-
-      smart_data = String(wifiname_len) + String(size_data) + String (WiFi.SSID().c_str()) + String(WiFi.psk().c_str());
+      smart_data = wifiname_len_str + String(size_data) + String (WiFi.SSID().c_str()) + String(WiFi.psk().c_str());
       size_data = String(smart_data).length();
-      smart_data = String(wifiname_len) + String(size_data) + String (WiFi.SSID().c_str()) + String(WiFi.psk().c_str());
+      smart_data = wifiname_len_str + String(size_data) + String (WiFi.SSID().c_str()) + String(WiFi.psk().c_str());
 
       Serial.println(size_data);
       Serial.println(smart_data); //打印出保存在eeprom数据
